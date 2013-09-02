@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var pushNotification = window.plugins.pushNotification;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -44,7 +45,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
         //Push Part
-        var pushNotification = window.plugins.pushNotification;
+       
         pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"447745035223","ecb":"app.onNotificationGCM"});
 
 
