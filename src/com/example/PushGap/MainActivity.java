@@ -1,4 +1,4 @@
-package com.example.hellogap;
+package com.example.PushGap;
 import org.apache.cordova.DroidGap;
 
 import android.os.Bundle;
