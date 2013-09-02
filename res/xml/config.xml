@@ -101,6 +101,7 @@
     <feature name="InAppBrowser">
       <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
     </feature>
+    <gap:plugin name="com.adobe.plugins.pushplugin" />
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
     <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
