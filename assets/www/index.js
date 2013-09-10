@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var pushNotification = window.plugins.pushNotification;
+
 var app = {
-    // Application Constructor
+		    // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
@@ -37,19 +37,19 @@ var app = {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
+  
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        var pushNotification = window.plugins.pushNotification;
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"447745035223","ecb":"app.onNotificationGCM"});
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
         //Push Part
-       
-        pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"447745035223","ecb":"app.onNotificationGCM"});
-
-
         console.log('Received Event: ' + id);
+             
     },
 //result contains any message sent from the plugin call
     successHandler: function(result) {
